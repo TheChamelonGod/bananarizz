@@ -1,8 +1,8 @@
 <script>
-function openWithHtml(html){
-var win = open("about:blank");
-win.document.write(html)
+function OpenWithHtml(html){
+var win = window.open("about:blank");
+win.document.write("<iframe src='https://thepizzaedition.github.io/assets/allgames/polytrack41/index.html' style='border: 0; width: 100%; height: 100%'> </iframe>" );
 
 }
 </script>
-<button onclick=OpenWithHtml("<iframe src='https://thepizzaedition.github.io/assets/allgames/polytrack41/index.html'</iframe> ")>  Hit the sigma button</button>
+<button onclick="OpenWithHtml('pt')">  Hit the sigma button</button>
