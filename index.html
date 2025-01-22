@@ -99,6 +99,15 @@
                     style="position:fixed; top:0; left:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
                 </iframe>`);
         }
+ document.addEventListener("DOMContentLoaded", function () {
+        const inputField = document.getElementById("sigma");
+        inputField.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                openUrl(inputField.value);
+            }
+        });
+    });
+
     </script>
 </head>
 <body>
@@ -113,7 +122,6 @@
         <button class="button-17" onclick="openUrl('hianime.to')">Hi Anime</button>
     </div>
     <input id="sigma" placeholder="Enter URL here..." />
-    <button class="button-17" onclick="openUrl(document.getElementById('sigma').value)">Go</button>
-    <a href="https://github.com/Kye1331/Game-Stuff/archive/refs/tags/SigmaGamesV3.zip">Download this website as an HTML file</a>
+    <a href="https://github.com/Kye1331/Game-Stuff/archive/refs/tags/SigmaGamesV4.zip">Download this website as an HTML file</a>
 </body>
 </html>
