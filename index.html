@@ -1,114 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="icon" type="image/x-icon" href="https://i.pinimg.com/600x315/75/33/eb/7533eb17212ce66e206aca54f9760370.jpg" >
-	<head>
-    
-<script>
-function openUrl(url){
-let win = window.open("about:blank");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/600x315/75/33/eb/7533eb17212ce66e206aca54f9760370.jpg">
+    <title>Sigma Games</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Google Sans", Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+            background-image: url('https://images.unsplash.com/photo-1550684376-efcbd6e3f031?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2slMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
+            background-size: cover;
+            background-attachment: fixed;
+        }
 
-if (!url.startsWith("https://")){
-	if (!url.startsWith("http://")){
-	url = "https://" + url;
-    }
-}
-    win.document.write(`<iframe width="100%" height="100%" src="${url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>`);
-}  
-</script>
-<h1 align="center">Sigma Games</h1>
-<div class="buttons">
-<button class="button-17" role="button" onclick = "openUrl('hahagames.com')"> Hahagames</button>
-<button class="button-17" role="button" onclick = "openUrl('typeracer.gq')"> rammerhead proxy</button>
-<button class="button-17" role="button" onclick = "openUrl('thepizzaedition.github.io')">pizza edition</button>
-<button class="button-17" role="button" onclick = "openUrl('https://thepizzaedition.github.io/assets/allgames/polytrack41/index.html')">polytrack</button>
-<button class="button-17" role="button" onclick = "openUrl('retrogames.cc')">retrogames</button>
-<button class="button-17" role="button" onclick = "openUrl('retrogames.cc/embed/19495-metroid-fusion-j-polla.html')"> Metroid Fusion</button>
-<button class="button-17" role="button" onclick = "openUrl('hianime.to')"> Hi Anime</button>
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+        }
 
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
 
+        .button-17 {
+            align-items: center;
+            appearance: none;
+            background-color: #333;
+            border-radius: 24px;
+            border: 1px solid #555;
+            color: #dcdcdc;
+            cursor: pointer;
+            display: inline-flex;
+            font-size: 14px;
+            font-weight: 500;
+            height: 48px;
+            justify-content: center;
+            padding: 0 24px;
+            text-transform: none;
+            transition: all 0.3s ease;
+        }
 
-</div>
-<input id="sigma" align = "center"></input>
-<button class="button-17" role="button" onclick = "openUrl(document.getElementById('sigma').value)"> Hit this button for extra websites: enter url:  <-----</button>
-<br>
-<a href="https://github.com/Kye1331/Game-Stuff/archive/refs/tags/SigmaGamesV3.zip"> Download this website as an HTML file</a>
-<style>
-h1{
-	font-family: "Google Sans";
-	color: #fff;
-}
-body{
-background-image:url(https://images.unsplash.com/photo-1550684376-efcbd6e3f031?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2slMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww)
-}
-.buttons{
-	display:flex;
-	justify-content:space-between;
-}
-.button-17 {
-  align-items: center;
-  appearance: none;
-  background-color: #fff;
-  border-radius: 24px;
-  border-style: none;
-  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-  box-sizing: border-box;
-  color: #3c4043;
-  cursor: pointer;
-  display: inline-flex;
-  fill: currentcolor;
-  font-family: "Google Sans",Roboto,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 48px;
-  justify-content: center;
-  letter-spacing: .25px;
-  line-height: normal;
-  max-width: 100%;
-  overflow: visible;
-  padding: 2px 24px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-  will-change: transform,opacity;
-  z-index: 0;
-}
+        .button-17:hover {
+            background-color: #444;
+            color: #fff;
+        }
 
-.button-17:hover {
-  background: #F6F9FE;
-  color: #174ea6;
-}
+        .button-17:focus {
+            outline: 2px solid #4285f4;
+        }
 
-.button-17:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-}
+        input {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            color: #dcdcdc;
+            font-size: 16px;
+            width: 300px;
+            text-align: center;
+        }
 
-.button-17:focus {
-  outline: none;
-  border: 2px solid #4285f4;
-}
+        a {
+            display: block;
+            text-align: center;
+            margin: 20px;
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.button-17:not(:disabled) {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):hover {
-  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
-}
-
-.button-17:not(:disabled):focus {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):active {
-  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
-}
-
-.button-17:disabled {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-</style>
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function openUrl(url) {
+            let win = window.open("about:blank");
+            if (!url.startsWith("https://") && !url.startsWith("http://")) {
+                url = "https://" + url;
+            }
+            win.document.write(`
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="${url}" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    style="position:fixed; top:0; left:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
+                </iframe>`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Sigma Games</h1>
+    <div class="buttons">
+        <button class="button-17" onclick="openUrl('hahagames.com')">Hahagames</button>
+        <button class="button-17" onclick="openUrl('typeracer.gq')">Rammerhead Proxy</button>
+        <button class="button-17" onclick="openUrl('thepizzaedition.github.io')">Pizza Edition</button>
+        <button class="button-17" onclick="openUrl('https://thepizzaedition.github.io/assets/allgames/polytrack41/index.html')">Polytrack</button>
+        <button class="button-17" onclick="openUrl('retrogames.cc')">Retrogames</button>
+        <button class="button-17" onclick="openUrl('retrogames.cc/embed/19495-metroid-fusion-j-polla.html')">Metroid Fusion</button>
+        <button class="button-17" onclick="openUrl('hianime.to')">Hi Anime</button>
+    </div>
+    <input id="sigma" placeholder="Enter URL here..." />
+    <button class="button-17" onclick="openUrl(document.getElementById('sigma').value)">Go</button>
+    <a href="https://github.com/Kye1331/Game-Stuff/archive/refs/tags/SigmaGamesV3.zip">Download this website as an HTML file</a>
+</body>
+</html>
