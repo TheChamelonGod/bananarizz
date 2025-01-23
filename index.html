@@ -5,8 +5,9 @@
      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="aquahoshino45510">
     <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/600x315/75/33/eb/7533eb17212ce66e206aca54f9760370.jpg">
-    <title>Sigma Games</title>
+    <title>Sigma Games - Ultimate Gaming Hub</title>
     <style>
         body {
             margin: 0;
@@ -35,9 +36,9 @@
         .button-17 {
             align-items: center;
             appearance: none;
-            background-color: #333;
+            background: linear-gradient(135deg, #333, #555);
             border-radius: 24px;
-            border: 1px solid #555;
+            border: none;
             color: #dcdcdc;
             cursor: pointer;
             display: inline-flex;
@@ -51,8 +52,9 @@
         }
 
         .button-17:hover {
-            background-color: #444;
+            background: linear-gradient(135deg, #444, #666);
             color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .button-17:focus {
@@ -84,10 +86,34 @@
         a:hover {
             text-decoration: underline;
         }
+
+        footer {
+            background-color: #111;
+            color: #dcdcdc;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .button-17 {
+                width: 100%;
+                max-width: 300px;
+                font-size: 12px;
+            }
+
+            input {
+                width: 90%;
+            }
+        }
     </style>
     <script>
-        //511 = bad
-        // 83 = not sigma
         function openUrl(url) {
             let win = window.open("about:blank");
             if (!url.startsWith("https://") && !url.startsWith("http://")) {
@@ -103,15 +129,15 @@
                     style="position:fixed; top:0; left:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
                 </iframe>`);
         }
- document.addEventListener("DOMContentLoaded", function () {
-        const inputField = document.getElementById("sigma");
-        inputField.addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
-                openUrl(inputField.value);
-            }
-        });
-    });
 
+        document.addEventListener("DOMContentLoaded", function () {
+            const inputField = document.getElementById("sigma");
+            inputField.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    openUrl(inputField.value);
+                }
+            });
+        });
     </script>
 </head>
 <body>
@@ -126,8 +152,7 @@
         <button class="button-17" onclick="openUrl('hianime.to')">Hi Anime</button>
     </div>
     <input id="sigma" placeholder="Enter URL here..." />
-    <a href="https://github.com/Kye1331/Game-Stuff/archive/refs/tags/SigmaGamesV7.zip">Download this website as an HTML file</a>
-    <footer>Don't copy or I might be really mad!!!</footer>
+    <a href="https://github.com/Kye1331/Game-Stuff/archive/refs/tags/SigmaGamesV8.zip">Download this website as an HTML file</a>
+    <footer>&copy; 2025 Sigma Games. All Rights Reserved.</footer>
 </body>
-
 </html>
