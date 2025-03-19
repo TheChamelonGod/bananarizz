@@ -12,14 +12,28 @@
     <title>Sigma Games</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
-           canvas {
+           
+      div{
+
+        align-items: center;
+        display:flex;
+        position: relative;
+
+      }
+            canvas {
+            
+    position: fixed;  /* Ensures the canvas fills the screen */
+    top: 0;
+    left: 0;
+    width: 100vw;     /* Full viewport width */
+    height: 100vh;    /* Full viewport height */  /* Keeps canvas in the background */
+    pointer-events: none;  /* Prevents accidental interactions */
+
+
             z-index : -1;
             display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: fixed;
+
             background: #040440; /* Ensures canvas always has dark purple background */
            }
             body {
@@ -92,8 +106,8 @@
 
 
         input {
-            display: block;
-            margin: 20px auto;
+          margin-right: 0;
+             margin: 0 auto;
             padding: 10px;
             border: 1px solid #555;
             border-radius: 5px;
@@ -150,14 +164,45 @@
             input {
                 width: 90%;
             }
+            .settings-bar {
+    position: fixed;      /* Fixes it in place */
+    bottom: 20px;         /* Positioned near the bottom */
+    right: 20px;          /* Positioned near the right edge */
+    z-index: 10;          /* Ensures it's above other elements */
+}
+
+.settings-bar .button-17 {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.settings-bar .button-17:hover {
+    background: #4285f4;
+    color: #fff;
+    opacity: 1;
+}
+
         }
     </style>
     <script>
+      let mode = "popup"
+      
         function openUrl(url) {
-            let win = window.open("about:blank");
-            if (!url.startsWith("https://") && !url.startsWith("http://")) {
+          if (!url.startsWith("https://") && !url.startsWith("http://")) {
                 url = "https://" + url;
             }
+            
+            if (mode == "popup"){
+            let win = window.open("about:blank");
+
+
             win.document.write(`
                 <iframe
                     width="100%"
@@ -167,6 +212,19 @@
                     allowfullscreen
                     style="position:fixed; top:0; left:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
                 </iframe>`);
+              } else {
+                document.write(`
+                <iframe
+                    width="100%"
+                    height="100%"
+                    src="${url}"
+                    frameborder="0"
+                    allowfullscreen
+                    style="position:fixed; top:0; left:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
+                </iframe>`);
+
+
+              }
         }
         function RopenUrl(url) {
            if (prompt("Are you sure you want to proceed? This could be devestating... (Reply 'Y' to proceed)").toLowerCase() === "y"){
@@ -183,8 +241,15 @@
                 if (event.key === "Enter") {
                     openUrl(inputField.value);
                 }
+                
             });
+            document.addEventListener("keydown", function(event){
+              if (event.key === "p") {
+                  mode = "gay";
+                }
+            })
         });
+        
     </script>
 </head>
     <h1>Sigma Games</h1>
@@ -201,10 +266,28 @@
         <button class="button-17" onclick="openUrl('demo.emulatorjs.org')">Emulator Js (download from romsgames.net)</button>
         <button class="button-17" onclick="openUrl('eaglercraft.com/mc')">Eaglercraft</button>
         <button class="button-17" onclick="openUrl('crazygames.com/embed/doors-online')">Doors</button>
-
     </div>
-    <input id="sigma" placeholder="Enter URL here..." />
+    <div style="display: flex; justify-content: center; position: relative;">
+      <div style="position: relative;">
+          <input id="sigma" 
+                 placeholder="Enter URL here..." 
+                 style="width: 300px; text-align: center; display: block; margin: 0 auto;" /> 
+          <button class="button-17" 
+                  onclick="openUrl(document.getElementById('sigma').value)" 
+                  style="fonst-size:300px; position: absolute; right: -70px; top: 50%; transform: translateY(-50%);">
+                  →
+          </button>
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+      
     <a href="https://github.com/Kye1331/Game-Stuff/archive/refs/tags/SigmaGamesV9.zip">Download this website as an HTML file</a>
+    <div class="settings-bar">
+      <button class="button-17"><img width="30" height="30"src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png"></button>
+  </div>
     <footer>&copy; 2025 Sigma Games All Rights Reserved.</footer>
     <canvas id="particlesCanvas"></canvas>
     <script src="index.js"></script>
